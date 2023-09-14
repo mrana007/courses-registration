@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
+import Course from "../Course/Course";
 
 const Courses = () => {
     const [courses, setCourses] = useState([]);
@@ -9,8 +11,10 @@ const Courses = () => {
         .then(data=> setCourses(data))
     },[])
     return (
-        <div>
-            
+        <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {
+                courses.map(course => <Course course= {course} ></Course>)
+            }
         </div>
     );
 };
