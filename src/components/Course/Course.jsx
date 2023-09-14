@@ -2,20 +2,20 @@
 /* eslint-disable no-unused-vars */
 
 
-const Course = ({course}) => {
+const Course = ({course, handleSelectedCourse}) => {
     const {image, title, description, price, credit_hours} =course;
     return (
         <div className="bg-white rounded-md p-4 mx-3">
             <div className="flex justify-center">
                 <img src={image} alt="" />
                 </div>
-            <h2 className="font-semibold text">{title}</h2>
-            <p>{description}</p>
-            <div className="flex justify-between">
+            <h2 className="font-semibold text py-4">{title}</h2>
+            <p className="font-normal text-sm">{description}</p>
+            <div className="flex justify-between py-3">
                 <p>$ Price: {price}</p>
-                <p>Credit: {credit_hours}</p>
+                <p>Credit: {credit_hours} hr</p>
             </div>
-            <button className="w-full bg-blue-500 text-white rounded">Select</button>
+            <button onClick={()=> handleSelectedCourse(course)} className="w-full bg-blue-500 text-white rounded">Select</button>
         </div>
     );
 };
