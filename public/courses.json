@@ -3,7 +3,7 @@
         "id": 1,
       "image": "https://i.ibb.co/chFZ3sh/Rectangle-1-1.png",
       "title": "Introduction to C Programming",
-      "description": "Learn the basics of programming with this comprehensive course. Suitable for beginners.",
+      "description": "C programming is a versatile and widely-used programming language known for its efficiency and flexibility. It is essential for system-level programming and software development.",
       "price": 49.99,
       "credit_hours": 1
     },
@@ -11,7 +11,7 @@
         "id": 2,
       "image": "https://i.ibb.co/ZL8Ywgv/Rectangle-1-2.png",
       "title": " Introduction to Algorithms",
-      "description": "Dive deep into data analysis techniques and tools. Prior programming knowledge required.",
+      "description": "Before there were computers, there were algorithms. But now that there are computers, there are even more algorithms, and algorithms lie at the heart of computing.",
       "price": 79.99,
       "credit_hours": 2
     },

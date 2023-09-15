@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types'
 
-const Credit = ({credit}) => {
+const Credit = ({credit, index}) => {
     const {title} = credit;
+    const courseSerial = index +1;
     return (
         <div>
-            <h3>{title}</h3>
+            <div>{courseSerial}. {title}</div>
+            
         </div>
     );
 };
 Credit.propTypes ={
-    credit: PropTypes.object
+    credit: PropTypes.object,
+    index: PropTypes.number
 }
 
 export default Credit;
