@@ -4,9 +4,8 @@ const Credit = ({credit, index}) => {
     const {title} = credit;
     const courseSerial = index +1;
     return (
-        <div>
+        <div className='pb-4'>
             <div>{courseSerial}. {title}</div>
-            
         </div>
     );
 };
