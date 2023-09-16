@@ -3,7 +3,6 @@ import './App.css'
 import Courses from './components/Courses/Courses'
 import Credits from './components/Credits/Credits'
 import Header from './components/Header/Header'
-// import swal from 'sweetalert';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
