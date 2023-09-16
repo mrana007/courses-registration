@@ -3,7 +3,9 @@ import './App.css'
 import Courses from './components/Courses/Courses'
 import Credits from './components/Credits/Credits'
 import Header from './components/Header/Header'
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [credits, setCredits] = useState([]);
@@ -14,7 +16,7 @@ function App() {
     const isExist = credits.find((item) =>item.id == course.id);
     if(remaining > 0 && course.credit_hours <= remaining){
       if(isExist){
-        swal("Warning!", "Already take this course", "error");
+        toast("Already take this course");
       }
       else{
         const newCredits = [...credits, course];
@@ -25,7 +27,7 @@ function App() {
         setRemaining(newRemaining);}
     }
     else{
-      swal("Info!", "You can not take more than credit 20 hrs", "info");
+      toast("You can not take more than credit 20 hrs");
     }
     };
     
@@ -36,6 +38,7 @@ function App() {
      <Courses handleSelectedCourse= {handleSelectedCourse}></Courses>
      <Credits credits={credits} remaining={remaining} totalCredit={totalCredit}></Credits>
      </div>
+     <ToastContainer></ToastContainer>
     </>
   )
 }
